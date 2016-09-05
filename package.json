@@ -1,0 +1,27 @@
+{
+  "name": "ng-vestadp",
+  "version": "1.0.0",
+  "description": "Anuglar 1 integration for VestaDatePicker",
+  "main": "src/angular.vestadatepicker.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eleboys/ng-vestadp.git"
+  },
+  "keywords": [
+    "angular",
+    "vestadp",
+    "vestadatepicker",
+    "shamsi",
+    "jalali",
+    "calendar"
+  ],
+  "author": "Nima Baghdadi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eleboys/ng-vestadp/issues"
+  },
+  "homepage": "https://github.com/eleboys/ng-vestadp#readme"
+}
