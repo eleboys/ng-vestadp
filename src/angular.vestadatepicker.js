@@ -21,7 +21,8 @@
             scope.options = scope.options || {};
             angular.extend(scope.options, {
                 dateChanged: function (elm, date) {
-                    if (scope.vdpSelectedDate && scope.vdpSelectedDate.toDateString()!=elm.vestadp('getDate').toDateString()){
+                    if (!scope.vdpSelectedDate || (scope.vdpSelectedDate.toDateString()!=elm.vestadp('getDate').toDateString()))
+                    {
                         scope.vdpSelectedDate = elm.vestadp('getDate');                    
                     }
                     ngModel.$setViewValue(date);
