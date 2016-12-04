@@ -32,10 +32,10 @@
 
             scope.$watch("vdpSelectedDate", function(){
                 if (scope.vdpSelectedDate){
-                    if (vdp.vestadp('getDate').toDateString()!=scope.vdpSelectedDate.toDateString()){
+                    // if (vdp.vestadp('getDate').toDateString()!=scope.vdpSelectedDate.toDateString()){
                         var d = scope.vdpSelectedDate;
                         vdp.vestadp('setDate', {year:d.getFullYear(), month: d.getMonth()+1, day: d.getDate()});
-                    }
+                    // }
                 }
             });
         }
