@@ -1,6 +1,7 @@
 {
   "name": "ng-vestadp",
   "description": "Anuglar 1 integration for VestaDatePicker",
+  "version": "2.0.0",
   "main": "src/angular.vestadatepicker.js",
   "authors": [
     "Nima Baghdadi"
