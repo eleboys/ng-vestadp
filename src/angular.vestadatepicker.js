@@ -22,6 +22,10 @@
             });
 
             var vdp = $(element).vestadp(options);
+
+            ngModel.$formatters.push(function(value){
+                return vdp.vestadp('formatDate', value);
+            });
         }
     }
 
