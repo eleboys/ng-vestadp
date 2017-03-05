@@ -14,7 +14,7 @@
         return directive;
 
         function link(scope, element, attrs, ngModel) {
-            var options = JSON.parse(attrs.vestadp) || {};
+            var options = scope.$eval(attrs.vestadp) || {};
             angular.extend(options, {
                 dateChanged: function (elm, date) {
                     ngModel.$setViewValue(elm.vestadp('getDate'));
@@ -25,6 +25,20 @@
 
             ngModel.$formatters.push(function(value){
                 return vdp.vestadp('formatDate', value);
+            });
+
+            scope.$watch(function () {
+                return scope.$eval(attrs.minDate);
+            }, function (newValue, oldValue) {
+                if (newValue == oldValue) return;
+                $(element).vestadp('minDate', newValue);
+            });
+
+            scope.$watch(function () {
+                return scope.$eval(attrs.maxDate);
+            }, function (newValue, oldValue) {
+                if (newValue == oldValue) return;
+                $(element).vestadp('maxDate', newValue);
             });
         }
     }
