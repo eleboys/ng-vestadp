@@ -24,6 +24,7 @@
             var vdp = $(element).vestadp(options);
 
             ngModel.$formatters.push(function(value){
+                value = value ? new Date(value) : value;
                 return vdp.vestadp('formatDate', value);
             });
 
